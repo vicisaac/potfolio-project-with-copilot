@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of a front-end developer showcasing projects, skills, and contact information." />
+  <title>My Developer Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header role="banner">
+    <nav role="navigation" aria-label="Main navigation">
+      <div class="hamburger-icon" onclick="toggleMenu()">☰</div>
+      <ul id="nav-menu">
+        <li><a href="#about-me">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about-me">
+      <h2>About Me</h2>
+      <p>Hello! I'm a passionate front-end developer with a love for clean code and intuitive design. I enjoy building responsive, accessible websites that provide great user experiences.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <label for="project-filter">Filter Projects:</label>
+      <select id="project-filter" onchange="filterProjects()">
+        <option value="all">All</option>
+        <option value="design">Web Design</option>
+        <option value="react">React</option>
+      </select>
+
+      <div id="project-list">
+        <article class="project" data-category="design">
+          <figure>
+            <img src="project1.png" alt="Screenshot of Project 1" onclick="openLightbox('project1.png')" />
+            <figcaption>Project One</figcaption>
+          </figure>
+        </article>
+        <article class="project" data-category="react">
+          <figure>
+            <img src="project2.png" alt="Screenshot of Project 2" onclick="openLightbox('project2.png')" />
+            <figcaption>Project Two</figcaption>
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML5 & Semantic Markup</li>
+        <li>CSS3 & Responsive Design</li>
+        <li>JavaScript (ES6+)</li>
+        <li>React.js</li>
+        <li>Git & GitHub</li>
+        <li>Accessibility (WCAG)</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My Developer Portfolio. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
